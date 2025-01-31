@@ -1,0 +1,11 @@
+# Title: Program for analyzing the firm equilibrium.										
+rm(list = ls())										
+library(Deriv)										
+library(ggplot2)										
+library(ggthemes)										
+library(FirmEquilibrium)										
+#Define the total revenue and total cost functions										
+TR<- expression(0 +52*Q  -2*Q^2 +0	*Q^3)
+TC<- expression(40	 +0*Q +0.5*Q^2 +0	*Q^3)
+results <- FirmEquilibrium(TR, TC)										
+print(results)										
